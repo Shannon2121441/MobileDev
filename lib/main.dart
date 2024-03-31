@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
-import 'pages/navigation.dart';
+import 'package:provider/provider.dart';
+import 'package:kms/models/shop.dart';
+import 'package:kms/pages/cart_page.dart';
+import 'pages/intro_page.dart';
+import 'pages/menu_page.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => Shop(),
+      child: const MyApp(),
+    ),
+  );
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,9 +20,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'I Wanna Commit',
-      theme: ThemeData(useMaterial3: true),
-      home: const NavigationPage(),
+      debugShowCheckedModeBanner: false,
+      home: const IntroPage(),
+      routes: {
+        '/intropage': (context) => const IntroPage(),
+        '/menupage': (context) => const MenuPage(),
+        '/cartpage': (context) => const CartPage(),
+      },
     );
   }
 }
