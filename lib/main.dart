@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:kms/models/shop.dart';
 import 'package:kms/pages/cart_page.dart';
-import 'pages/intro_page.dart';
-import 'pages/menu_page.dart';
+import 'package:kms/pages/intro_page.dart';
+import 'package:kms/pages/menu_page.dart';
+import 'package:kms/pages/login_page.dart';
 
 void main() {
   runApp(
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/intropage': (context) => const IntroPage(),
         '/menupage': (context) => const MenuPage(),
         '/cartpage': (context) => const CartPage(),
+        '/login': (context) => LoginPage(),
       },
     );
   }

@@ -4,8 +4,6 @@ import 'merch.dart';
 class Shop extends ChangeNotifier {
   //merch menu
   final List<Merch> _merchMenu = [
-    //gaming
-    //venti
     Merch(
       name: "Venti",
       artist: "Kamiyo",
@@ -18,8 +16,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/venti.png",
       rating: "5.0",
     ),
-
-    //zl
     Merch(
       name: "Zhongli",
       artist: "Kamiyo",
@@ -32,8 +28,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/zl.png",
       rating: "4.8",
     ),
-
-    //ei
     Merch(
       name: "Ei",
       artist: "Kamiyo",
@@ -46,8 +40,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/ei.png",
       rating: "4.5",
     ),
-
-    //Nahida
     Merch(
       name: "Nahida",
       artist: "Kamiyo",
@@ -60,8 +52,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/nahida.png",
       rating: "4.8",
     ),
-
-    //Furina
     Merch(
       name: "Furina",
       artist: "Kamiyo",
@@ -74,8 +64,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/furina.png",
       rating: "5.0",
     ),
-
-    //Neuvillette
     Merch(
       name: "Neuvillette",
       artist: "Kamiyo",
@@ -88,8 +76,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/neuvillette.png",
       rating: "4.5",
     ),
-
-    //Kazuha
     Merch(
       name: "Kazuha",
       artist: "Kamiyo",
@@ -102,8 +88,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/kazuha.png",
       rating: "4.5",
     ),
-
-    //Wrio
     Merch(
       name: "Wriothesley",
       artist: "Kamiyo",
@@ -116,8 +100,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/wrio.png",
       rating: "4.2",
     ),
-
-    //Xiao
     Merch(
       name: "Xiao",
       artist: "Kamiyo",
@@ -130,10 +112,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/xiao.png",
       rating: "4.2",
     ),
-
-    //anime
-
-    //No face
     Merch(
       name: "No Face",
       artist: "Atokyojin",
@@ -146,8 +124,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/noface.png",
       rating: "5.0",
     ),
-
-    //soot
     Merch(
       name: "Soot Sprite",
       artist: "Atokyojin",
@@ -160,8 +136,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/soot.png",
       rating: "4.8",
     ),
-
-    //tbhk
     Merch(
       name: "Hanako-kun",
       artist: "Atokyojin",
@@ -174,8 +148,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/tbhk.png",
       rating: "4.5",
     ),
-
-    //Maomao
     Merch(
       name: "Maomao",
       artist: "Atokyojin",
@@ -187,8 +159,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/maomao.png",
       rating: "4.8",
     ),
-
-    //Bocchi
     Merch(
       name: "Bocchi",
       artist: "Atokyojin",
@@ -201,10 +171,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/bocchi.png",
       rating: "4.8",
     ),
-
-    //kpop
-
-    //ls group
     Merch(
       name: "Le sserafim",
       artist: "HYBE",
@@ -216,8 +182,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/ls1.jpg",
       rating: "4.5",
     ),
-
-    //ls cw
     Merch(
       name: "Chaewon",
       artist: "HYBE",
@@ -229,8 +193,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/ls2.jpg",
       rating: "4.2",
     ),
-
-    //ls sk
     Merch(
       name: "Sakura",
       artist: "HYBE",
@@ -242,8 +204,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/ls3.jpg",
       rating: "4.2",
     ),
-
-    //ls Yunjin
     Merch(
       name: "Yunjin",
       artist: "HYBE",
@@ -255,8 +215,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/ls4.jpg",
       rating: "4.2",
     ),
-
-    //ls kh
     Merch(
       name: "Kazuha",
       artist: "HYBE",
@@ -268,8 +226,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/ls5.jpg",
       rating: "4.2",
     ),
-
-    //ls ec
     Merch(
       name: "Eunchae",
       artist: "HYBE",
@@ -281,8 +237,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/ls6.jpg",
       rating: "4.2",
     ),
-
-    //nj group
     Merch(
       name: "NewJeans",
       artist: "Kamiyo",
@@ -294,8 +248,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/nj1.png",
       rating: "5.0",
     ),
-
-    //nj minji
     Merch(
       name: "Minji",
       artist: "Kamiyo",
@@ -307,8 +259,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/nj2.png",
       rating: "4.5",
     ),
-
-    //nj hanni
     Merch(
       name: "Hanni",
       artist: "Kamiyo",
@@ -320,8 +270,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/nj3.png",
       rating: "4.5",
     ),
-
-    //nj danielle
     Merch(
       name: "Danielle",
       artist: "Kamiyo",
@@ -333,8 +281,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/nj4.png",
       rating: "4.5",
     ),
-
-    //nj haerin
     Merch(
       name: "Haerin",
       artist: "Kamiyo",
@@ -346,8 +292,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/nj5.png",
       rating: "4.5",
     ),
-
-    //nj hyein
     Merch(
       name: "Hyein",
       artist: "Kamiyo",
@@ -359,8 +303,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/nj6.png",
       rating: "4.5",
     ),
-
-    //txt grp
     Merch(
       name: "TXT",
       artist: "Kamiyo",
@@ -373,8 +315,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/txt1.png",
       rating: "4.5",
     ),
-
-    //txt sb
     Merch(
       name: "Soobin",
       artist: "Kamiyo",
@@ -386,8 +326,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/txt2.png",
       rating: "4.5",
     ),
-
-    //txt yj
     Merch(
       name: "Yeonjun",
       artist: "Kamiyo",
@@ -399,8 +337,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/txt3.png",
       rating: "4.5",
     ),
-
-    //txt bg
     Merch(
       name: "Beomgyu",
       artist: "Kamiyo",
@@ -412,8 +348,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/txt4.png",
       rating: "4.5",
     ),
-
-    //txt th
     Merch(
       name: "Taehyun",
       artist: "Kamiyo",
@@ -425,8 +359,6 @@ class Shop extends ChangeNotifier {
       imagePath: "lib/images/txt5.png",
       rating: "4.5",
     ),
-
-    //txt hk
     Merch(
       name: "Huening Kai",
       artist: "Kamiyo",
@@ -437,6 +369,94 @@ class Shop extends ChangeNotifier {
       price: "10.00",
       imagePath: "lib/images/txt6.png",
       rating: "4.5",
+    ),
+    Merch(
+      name: "Albedo",
+      artist: "Kamiyo",
+      desc: "",
+      merchtype: "Sticker",
+      category: "Games",
+      fandom: "Genshin",
+      price: "20.00",
+      imagePath: "lib/images/venti.png",
+      rating: "5.0",
+    ),
+    Merch(
+      name: "Dainsleif",
+      artist: "Kamiyo",
+      desc: "",
+      merchtype: "Sticker",
+      category: "Games",
+      fandom: "Genshin",
+      price: "20.00",
+      imagePath: "lib/images/venti.png",
+      rating: "5.0",
+    ),
+    Merch(
+      name: "Lyney",
+      artist: "Kamiyo",
+      desc: "",
+      merchtype: "Sticker",
+      category: "Games",
+      fandom: "Genshin",
+      price: "20.00",
+      imagePath: "lib/images/venti.png",
+      rating: "5.0",
+    ),
+    Merch(
+      name: "Wanderer",
+      artist: "Kamiyo",
+      desc: "",
+      merchtype: "Sticker",
+      category: "Games",
+      fandom: "Genshin",
+      price: "20.00",
+      imagePath: "lib/images/venti.png",
+      rating: "5.0",
+    ),
+    Merch(
+      name: "Keqing",
+      artist: "Kamiyo",
+      desc: "",
+      merchtype: "Sticker",
+      category: "Games",
+      fandom: "Genshin",
+      price: "20.00",
+      imagePath: "lib/images/venti.png",
+      rating: "5.0",
+    ),
+    Merch(
+      name: "Jean",
+      artist: "Kamiyo",
+      desc: "",
+      merchtype: "Sticker",
+      category: "Games",
+      fandom: "Genshin",
+      price: "20.00",
+      imagePath: "lib/images/venti.png",
+      rating: "5.0",
+    ),
+    Merch(
+      name: "Hu Tao",
+      artist: "Kamiyo",
+      desc: "",
+      merchtype: "Sticker",
+      category: "Games",
+      fandom: "Genshin",
+      price: "20.00",
+      imagePath: "lib/images/venti.png",
+      rating: "5.0",
+    ),
+    Merch(
+      name: "Ayaka",
+      artist: "Kamiyo",
+      desc: "",
+      merchtype: "Sticker",
+      category: "Games",
+      fandom: "Genshin",
+      price: "20.00",
+      imagePath: "lib/images/venti.png",
+      rating: "5.0",
     ),
   ];
 
