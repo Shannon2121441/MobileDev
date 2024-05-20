@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:kms/components/button.dart';
 import 'package:kms/models/merch.dart';
 import 'package:kms/models/shop.dart';
+import 'package:kms/pages/login_page.dart'; // Import the login page
+import 'package:kms/pages/auth_service.dart'; // Import the AuthService for checking login status
 import 'package:kms/theme/colors.dart';
 import 'package:provider/provider.dart';
 
@@ -138,7 +140,23 @@ class CartPage extends StatelessWidget {
                 padding: const EdgeInsets.all(25.0),
                 child: MyButton(
                   text: "Pay Now",
-                  onTap: () {},
+                  onTap: () async {
+                    // Check if the user is logged in
+                    final isLoggedIn = await AuthService.isLoggedIn();
+
+                    if (!isLoggedIn) {
+                      // If not logged in, display a notification and redirect to the login page
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('Please log in to proceed.'),
+                        ),
+                      );
+                      Navigator.pushNamed(context, '/login');
+                    } else {
+                      // If logged in, proceed with payment
+                      // Your payment logic here
+                    }
+                  },
                 ),
               )
             ],

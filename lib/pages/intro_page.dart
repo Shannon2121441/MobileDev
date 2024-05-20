@@ -29,7 +29,7 @@ class IntroPage extends StatelessWidget {
               child: Text(
                 "Figuras d'Arte",
                 style: GoogleFonts.dmSans(
-                    fontSize: 30,
+                    fontSize: 40,
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),

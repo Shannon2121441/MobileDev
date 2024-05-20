@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kms/components/button.dart';
 import 'package:kms/components/merch_tile.dart';
 import 'package:kms/models/shop.dart';
 import 'package:kms/theme/colors.dart';
@@ -9,6 +8,9 @@ import 'package:kms/pages/navbar.dart';
 import 'package:kms/pages/anime_page.dart';
 import 'package:kms/pages/gaming_page.dart';
 import 'package:kms/pages/kpop_page.dart';
+import 'package:kms/pages/login_page.dart'; // Import your login page
+
+import 'package:kms/pages/auth_service.dart'; // Import AuthService
 
 import 'merch_details_page.dart';
 
@@ -49,13 +51,25 @@ class _MenuPageState extends State<MenuPage> {
         backgroundColor: secondaryColor,
         foregroundColor: Color.fromARGB(249, 255, 249, 249),
         elevation: 0,
-        title: Text("Figuras d'Arte",
-            style: GoogleFonts.dmSans(fontSize: 20, color: Colors.white)),
+        title: Text(
+          "Figuras d'Arte",
+          style: GoogleFonts.dmSans(fontSize: 20, color: Colors.white),
+        ),
         actions: [
           //cart button
           IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/cartpage');
+            onPressed: () async {
+              final isLoggedIn = await AuthService.isLoggedIn();
+              if (isLoggedIn) {
+                Navigator.pushNamed(context, '/cartpage');
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Please log in to view your cart.'),
+                  ),
+                );
+                Navigator.pushNamed(context, '/login');
+              }
             },
             icon: const Icon(Icons.shopping_cart),
           )
@@ -85,11 +99,9 @@ class _MenuPageState extends State<MenuPage> {
                         fontSize: 20,
                       ),
                     ),
-
                     const SizedBox(
                       height: 10,
                     ),
-
                     Text(
                       'Only until April 30!',
                       style: GoogleFonts.dmSans(
@@ -108,7 +120,6 @@ class _MenuPageState extends State<MenuPage> {
                     ),
                   ],
                 ),
-
                 //image
                 Image.asset(
                   'lib/images/sale.png',
@@ -117,11 +128,9 @@ class _MenuPageState extends State<MenuPage> {
               ],
             ),
           ),
-
           const SizedBox(
             height: 5,
           ),
-
           //search bar
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -149,7 +158,6 @@ class _MenuPageState extends State<MenuPage> {
               ),
             ),
           ),
-
           //category
           Padding(
             padding: const EdgeInsets.only(
@@ -168,7 +176,6 @@ class _MenuPageState extends State<MenuPage> {
               ],
             ),
           ),
-
           Padding(
             padding: EdgeInsets.only(top: 5, left: 15, right: 15),
             child: Column(
@@ -295,7 +302,6 @@ class _MenuPageState extends State<MenuPage> {
               ],
             ),
           ),
-
           //menu list
           Padding(
             padding: const EdgeInsets.only(top: 5, left: 25, right: 25),
@@ -313,9 +319,7 @@ class _MenuPageState extends State<MenuPage> {
               ],
             ),
           ),
-
           const SizedBox(height: 10),
-
           Expanded(
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
@@ -326,7 +330,6 @@ class _MenuPageState extends State<MenuPage> {
               ),
             ),
           ),
-
           const SizedBox(height: 15),
         ],
       ),
